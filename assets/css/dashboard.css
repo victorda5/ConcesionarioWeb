@@ -1,0 +1,376 @@
+section {
+  max-width: 1024px;
+  margin: auto;
+  padding: 2rem 1.5rem;
+  animation: fadeIn 1s ease;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 0rem;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  background-color: rgb(30 30 30);
+  transition: width 100ms ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(1);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  /* filter: grayscale(0%) opacity(1); */
+  /*background: var(--bg-secondary);*/
+  /*color: var(--text-secondary);*/
+  color: red;
+  background-color: blue;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar-selected {
+  background-color: rgb(50 50 50);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+/* DASHBOARD */
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem;
+}
+
+.card {
+  height: auto;
+  border-radius: .75rem;
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+
+.card-content {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.mobile {
+  display: none;
+  color: hsl(219, 4%, 55%);
+}
+
+.section-title,
+h3 {
+  margin-left: .5rem;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  color: hsl(219, 4%, 55%);
+}
+
+.card-content-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 50px;
+}
+
+svg {
+  width: 50px;
+}
+
+.card-data {
+  font-size: 35px;
+}
+
+/* SALES */
+
+.table {
+  border-radius: 1rem;
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.car-card {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: rgb(30 30 30);
+  padding: 1rem;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 7px 7px 15px -3px rgba(0, 0, 0, 0.1);
+  cursor: default;
+}
+
+.car-card:hover {
+  background-color: rgb(40 40 40);
+}
+
+.car-img {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  line-height: 50px;
+}
+
+
+/* Medium screens */
+@media only screen and (max-width: 900px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    z-index: 9999;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .table {
+    grid-template-columns: 228px 228px;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  img {
+    width: 180px;
+    height: 90px;
+  }
+
+  .car-card {
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  span {
+    line-height: unset;
+  }
+
+  .car-img {
+    gap: 1rem;
+  }
+
+  .car-title {
+    font-size: 18px;
+  }
+
+  img {
+    margin: 24px 0;
+  }
+
+  .car-stat {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .car-stat:first-child {
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .table {
+    grid-template-columns: 250px;
+    justify-content: center;
+  }
+
+  .nav-link svg {
+    width: 1.75rem;
+    margin: 0 .5rem;
+  }
+
+  .card-wrapper{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 901px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+
+  .car-card {
+    display: grid;
+    grid-template-columns: 1.5fr .2fr 1fr .5fr;
+    text-align: center;
+  }
+
+  .car-card:nth-child(1) {
+    background-color: rgb(40 40 40);
+    padding: .5rem;
+  }
+
+  .car-img {
+    display: grid;
+    grid-template-columns: 100px auto;
+    gap: 1rem;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: .2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* DASHBOARD CARD COLORS */
+
+.blue {
+  background: #2457ff;
+}
+
+.blue:hover {
+  background: #2e5fff;
+}
+
+.orange {
+  background: #ff6200;
+}
+
+.orange:hover {
+  background: #ff7723;
+}
+
+.green {
+  background: #29712c;
+}
+
+.green:hover {
+  background: #368338;
+}
+
+.red {
+  background: #cf0000;
+}
+
+.red:hover {
+  background: #fc2f2f;
+}

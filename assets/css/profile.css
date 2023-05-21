@@ -1,0 +1,377 @@
+* {
+	font-family: 'Exo', sans-serif;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+}
+
+.login-form {
+	min-width: 250px;
+	max-width: 400px;
+	border-radius: 24px;
+	padding: 15px;
+	background-color: rgb(40 40 40);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-top: 35px;
+}
+
+.login-form input[type="text"] {
+	margin-top: 30px;
+}
+
+.login-form input[type="password"],
+.login-form input[type="email"] {
+	margin-top: 10px;
+}
+
+input {
+	outline: none;
+}
+
+.links {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.links a {
+	color: var(--first-color);
+}
+
+.login-form input[type="submit"] {
+	display: inline-block;
+	background-color: var(--first-color);
+	color: var(--white-color);
+	padding: 1rem 2rem;
+	border-radius: .25rem;
+	font-size: var(--normal-font-size);
+	transition: .3s;
+	width: 100%;
+	border-radius: 1rem;
+	margin-top: 2rem;
+}
+
+.login-form input[type="submit"]:hover {
+	opacity: 0.8;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+	border: 2px #21D4FD solid;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+	width: 100%;
+	border: none;
+	border-radius: 24px;
+	font-size: 1rem;
+	font-family: 'Exo', sans-serif;
+	background-color: rgb(60 60 60);
+	padding: 15px;
+	color: white;
+}
+
+.button-container {
+	display: flex;
+	justify-content:
+		center;
+	gap: 2rem;
+}
+
+.form-button {
+	border: 0;
+	width: 150px;
+	text-align: center;
+	background-color: var(--first-color);
+	color: var(--white-color);
+	padding: 1rem 2rem;
+	border-radius: .25rem;
+	font-size: var(--normal-font-size);
+	transition: .3s;
+	cursor: pointer;
+}
+
+.form-button:hover {
+	background-color: var(--first-color-alt);
+}
+
+.home {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-top: 3rem;
+}
+
+@media screen and (max-width: 767px) {
+	.button-container {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto;
+	}
+
+	.form-button {
+		width: 280px;
+	}
+
+	.home {
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+		padding-top: 1rem;
+		height: auto !important;
+	}
+}
+
+/* DASHBOARD */
+
+.card-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 1rem;
+}
+
+.card {
+	height: auto;
+	border-radius: .75rem;
+	padding: 2rem 1rem;
+	cursor: pointer;
+}
+
+.card-content {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.mobile {
+	display: none;
+	color: hsl(219, 4%, 55%);
+}
+
+.section-title,
+h3 {
+	margin-left: .5rem;
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 18px;
+	margin-bottom: 1rem;
+	color: hsl(219, 4%, 55%);
+}
+
+.card-content-grid {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+h2 {
+	font-size: 20px;
+	line-height: 50px;
+}
+
+svg {
+	width: 50px;
+}
+
+.card-data {
+	font-size: 35px;
+}
+
+/* SALES */
+
+.table {
+	border-radius: 1rem;
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.car-card {
+	display: grid;
+	grid-template-columns: 1;
+	gap: 1rem;
+	text-align: center;
+	border-radius: 1rem;
+	background-color: rgb(30 30 30);
+	padding: 1rem;
+	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 7px 7px 15px -3px rgba(0, 0, 0, 0.1);
+	cursor: default;
+}
+
+.car-card:hover {
+	background-color: rgb(40 40 40);
+}
+
+.car-img {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+span {
+	line-height: 50px;
+}
+
+.sales-stats{
+	width: 1024px;
+}
+
+/* Medium screens */
+@media only screen and (max-width: 900px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+		z-index: 9999;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.section-title {
+		text-align: center;
+	}
+
+	.table {
+		grid-template-columns: 228px 228px;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	img {
+		width: 180px;
+		height: 90px;
+	}
+
+	.car-card {
+		padding: 2rem 1.5rem 1.5rem 1.5rem;
+	}
+
+	span {
+		line-height: unset;
+	}
+
+	.car-img {
+		gap: 1rem;
+	}
+
+	.car-title {
+		font-size: 18px;
+	}
+
+	img {
+		margin: 24px 0;
+	}
+
+	.car-stat {
+		display: grid;
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+	}
+
+	.car-stat:first-child {
+		justify-content: center;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.nav-link {
+		justify-content: center;
+	}
+
+	main {
+		margin: 0;
+		margin-bottom: 5rem;
+	}
+
+	.sales-stats{
+		width: auto;
+	}
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.table {
+		grid-template-columns: 250px;
+		justify-content: center;
+	}
+
+	.nav-link svg {
+		width: 1.75rem;
+		margin: 0 .5rem;
+	}
+
+	.card-wrapper {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Large screens */
+@media only screen and (min-width: 901px) {
+	.navbar {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
+
+	.navbar:hover {
+		width: 16rem;
+	}
+
+	.navbar:hover .link-text {
+		display: inline;
+	}
+
+	.navbar:hover .logo svg {
+		margin-left: 11rem;
+	}
+
+	.navbar:hover .logo-text {
+		left: 0px;
+	}
+
+	.car-card {
+		display: grid;
+		grid-template-columns: 1.5fr .2fr 1fr .5fr;
+		text-align: center;
+	}
+
+	.car-card:nth-child(1) {
+		background-color: rgb(40 40 40);
+		padding: .5rem;
+	}
+
+	.car-img {
+		display: grid;
+		grid-template-columns: 100px auto;
+		gap: 1rem;
+	}
+}

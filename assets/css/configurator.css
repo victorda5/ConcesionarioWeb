@@ -1,0 +1,280 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 69%, 56%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: rgb(20 20 20);
+  --container-color: rgb(30 30 30);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: 'Exo', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  grid-template-rows: 100vh;
+}
+
+.car-column {
+  background-color: rgb(30 30 30);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel-column {
+  background-color: rgb(40 40 40);
+  overflow-y: scroll;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.car-column img {
+  width: 60vw;
+  cursor: grab;
+}
+
+.panel-column-content,
+.purchase-content {
+  padding: 2rem;
+}
+
+.radio_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(50 50 50);
+  width: auto;
+  height: 50px;
+  border-radius: 9999px;
+  box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+input[type="radio"] {
+  appearance: none;
+  display: none;
+}
+
+label {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  border-radius: 9999px;
+  overflow: hidden;
+  color: #6e6e6edd;
+}
+
+input[type="radio"]:checked+label {
+  background-color: #1e90ff;
+  color: #ffffff;
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 30vh 70vh;
+  }
+
+  .car-column img {
+    width: 60vw;
+    min-width: 200px;
+  }
+
+  .radio_container {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 800px) and (max-width:1200px) {
+  .grid-container {
+    grid-template-columns: auto 300px;
+    grid-template-rows: 1fr;
+    height: 100vh;
+  }
+
+  .panel-column-content,
+  .purchase-content {
+    padding: 2rem;
+  }
+
+  .radio_container {
+    width: 22vw;
+  }
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: red;
+}
+
+.grey {
+  background-color: grey;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  background-color: hsl(219, 69%, 52%);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.button-div {
+  background-color: rgb(64, 119, 240);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+h2 {
+  padding: 0;
+}
+
+.section2 {
+  margin-top: 2rem;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+h5 {
+  color: hsl(219, 4%, 55%);
+  cursor: pointer;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+}
+
+.title h2 {
+  margin-top: 0;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-hover {
+  background-color: hsl(219, 4%, 81%);
+  border-radius: 1rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center!important;
+  font-size: 18px!important;
+  display: grid!important;
+  align-items: center!important;
+  justify-items: center!important;
+  justify-content: center!important;
+  align-content: center!important;
+}

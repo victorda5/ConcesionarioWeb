@@ -1,0 +1,84 @@
+* {
+	font-family: 'Exo', sans-serif;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+}
+
+.login-form {
+	min-width: 250px;
+	max-width: 400px;
+	border-radius: 24px;
+	padding: 15px;
+	background-color: rgb(40 40 40);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-form h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-top: 35px;
+}
+
+.login-form input[type="text"] {
+	margin-top: 30px;
+}
+
+.login-form input[type="password"],
+.login-form input[type="email"] {
+	margin-top: 10px;
+}
+
+input {
+	outline: none;
+}
+
+.register-msg {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.register-msg a {
+	color: var(--first-color);
+}
+
+.login-form input[type="submit"] {
+	display: inline-block;
+	background-color: var(--first-color);
+	color: var(--white-color);
+	padding: 1rem 2rem;
+	font-size: var(--normal-font-size);
+	transition: .3s;
+	width: 100%;
+	border-radius: 1rem;
+	margin-top: 2rem;
+	cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+	background-color: var(--first-color-alt);
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+	border: 2px var(--first-color) solid;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"] {
+	width: 100%;
+	border: none;
+	border-radius: 1rem;
+	font-size: 1rem;
+	font-family: 'Exo', sans-serif;
+	background-color: rgb(60 60 60);
+	padding: 15px;
+	color: white;
+}

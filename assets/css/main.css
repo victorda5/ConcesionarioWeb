@@ -1,0 +1,107 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 69%, 56%);
+  --first-color-alt: hsl(219, 69%, 52%);
+  --title-color: hsl(219, 8%, 95%);
+  --text-color: hsl(219, 8%, 75%);
+  --text-color-light: hsl(219, 4%, 55%);
+  --white-color: #fff;
+  --body-color: rgb(20 20 20);
+  --container-color: rgb(30 30 30);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Exo', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.box-shadow{
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),7px 7px 15px -3px rgba(0,0,0,0.1);
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: .6rem;
+  background-color: hsl(219, 4%, 16%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(219, 4%, 24%);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-hover {
+  background-color: hsl(219, 4%, 81%);
+  border-radius: 1rem;
+}
